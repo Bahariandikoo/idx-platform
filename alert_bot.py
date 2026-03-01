@@ -24,7 +24,7 @@ from apscheduler.triggers.cron import CronTrigger
 import yfinance as yf
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from data.fetcher import DEFAULT_WATCHLIST
+from data.fetcher import ALL_IDX_STOCKS
 
 import os
 
@@ -33,7 +33,7 @@ import os
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
 CHAT_ID        = os.environ.get("CHAT_ID", "")
 
-WATCHLIST        = DEFAULT_WATCHLIST
+WATCHLIST        = ALL_IDX_STOCKS
 FAST_EMA         = 20
 SLOW_EMA         = 50
 CACHE_HOUR       = 6
